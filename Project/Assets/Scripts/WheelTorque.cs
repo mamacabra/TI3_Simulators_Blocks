@@ -3,8 +3,8 @@ using UnityEngine;
 public class WheelTorque : MonoBehaviour
 {
     private WheelCollider _wheel;
-    public float torque = 400;
-    public float brake = 800;
+    public float torque = 1000;
+    public float brake = 3000;
     
     private void Start()
     {
