@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f0298162295e7248b6705f32fd986cd, type: 2}
+  - {fileID: 2100000, guid: aa98f076d96591a4184a2be6549cc9df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2f281402eea9841a376c737e24cc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 0}
   wheel: {fileID: 0}
   angle: 30
 --- !u!54 &5525663552101719134
