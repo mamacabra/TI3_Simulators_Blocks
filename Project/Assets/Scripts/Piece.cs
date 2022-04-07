@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Piece : MonoBehaviour
 {
-    private const float MassDefault = 1f;
+    private const float MassDefault = 10f;
     private const float RaycastDistance = 0.4f;
 
     private readonly RaycastHit[] _hit = new RaycastHit[6];
@@ -21,29 +21,31 @@ public class Piece : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.mass = MassDefault;
 
-        for (int i = 0; i < _directions.Length; i++)
-        {
-            bool colliding = Physics.Raycast(transform.position, _directions[i], out _hit[i], RaycastDistance);
+        //for (int i = 0; i < _directions.Length; i++)
+        //{
+        //    bool colliding = Physics.Raycast(transform.position, _directions[i], out _hit[i], RaycastDistance);
 
-            if (colliding)
-            {
-                HingeJoint joint = gameObject.AddComponent<HingeJoint>();
-                joint.connectedBody = _hit[i].rigidbody;
+        //    if (colliding)
+        //    {
+                FixedJoint joint = gameObject.AddComponent<FixedJoint>();
+                Rigidbody blockHeartRB = GameObject.Find("BlockHeart").GetComponent<Rigidbody>();
+                joint.connectedBody = blockHeartRB;
+        joint.enablePreprocessing = false;
 
-                joint.enableCollision = true;
-                joint.massScale = 500f;
-                joint.connectedMassScale = 5f;
+                //joint.enableCollision = true;
+                //joint.massScale = 10f;
+                //joint.connectedMassScale = 1f;
 
-                // joint.anchor = _directions[i] / 2;
-                // joint.axis = _directions[i];
+                //joint.anchor = _directions[i] / 2;
+                //joint.axis = _directions[i];
 
-                joint.useLimits = true;
-                joint.limits = new JointLimits
-                {
-                    contactDistance = 0f
-                };
-            }
-        }
+                //joint.useLimits = true;
+                //joint.limits = new JointLimits
+                //{
+                //    contactDistance = 0f
+                //};
+        //    }
+        //}
     }
 
     private void Update()

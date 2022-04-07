@@ -4,8 +4,8 @@ public class WheelTorque : MonoBehaviour
 {
     public WheelCollider wheel;
     public Transform model;
-    public float torque = 1000;
-    public float brake = 3000;
+    public float torque = 1000f;
+    public float brake = 4000f;
 
     private void Update()
     {
