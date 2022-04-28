@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EixoRoda : MonoBehaviour
 {
+    public float angle;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +15,8 @@ public class EixoRoda : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        this.gameObject.transform.eulerAngles += new Vector3(0, horizontal * 2, 0);
-        // this.gameObject.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, (),this.transform.eulerAngles.z);
+        // this.gameObject.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, horizontal*angle, this.transform.eulerAngles.z);
+        this.gameObject.transform.rotation = Quaternion.Euler(new Vector3(this.transform.eulerAngles.x, horizontal * angle,this.transform.eulerAngles.z));
         //this.gameObject.transform.Rotate(this.transform.rotation.x, horizontal * 30, this.transform.rotation.z, Space.World);
     }
 }
