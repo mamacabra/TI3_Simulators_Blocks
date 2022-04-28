@@ -7,8 +7,8 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Physic Material
-  dynamicFriction: 12.41
+  dynamicFriction: 15.71
   staticFriction: 0
   bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
+  frictionCombine: 1
+  bounceCombine: 1
