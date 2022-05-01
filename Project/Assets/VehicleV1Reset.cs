@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VehicleV1Reset : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform local;
     void Start()
     {
         
@@ -15,7 +15,7 @@ public class VehicleV1Reset : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            this.gameObject.transform.position = new Vector3(0,4,0);
+            this.gameObject.transform.position = local.position;
             this.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
             this.gameObject.GetComponent<Rigidbody>().Sleep();
         }
