@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FoiOqueDeuPraFazer.unity
+    guid: 0059d372315bbb141b86f78732f6fcc7
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: a231d7f4f49c9814cb8575c12cd10ed2
+  - enabled: 1
+    path: Assets/Scenes/FoiOqueDeuPraFazer2.unity
+    guid: ef8bc05b6a7ee794f89383c9f3c90bf6
   m_configObjects: {}
