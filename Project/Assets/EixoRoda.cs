@@ -15,8 +15,10 @@ public class EixoRoda : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
+        Vector3 angl = this.transform.eulerAngles;
+        angl.y = horizontal * angle;
         // this.gameObject.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, horizontal*angle, this.transform.eulerAngles.z);
-        this.gameObject.transform.rotation = Quaternion.Euler(new Vector3(this.transform.eulerAngles.x, horizontal * angle,this.transform.eulerAngles.z));
+        this.gameObject.transform.rotation = Quaternion.Euler(angl);
         //this.gameObject.transform.Rotate(this.transform.rotation.x, horizontal * 30, this.transform.rotation.z, Space.World);
     }
 }
