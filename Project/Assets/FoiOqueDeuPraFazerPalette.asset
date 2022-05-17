@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c509dbaa7b6f416409e3195321a2187e, type: 3}
+  m_Name: FoiOqueDeuPraFazerPalette
+  m_EditorClassIdentifier: 
+  PaletteLayers:
+  - {fileID: 8574412962073106934, guid: 6b97f97e7fa94c445b2ab5c3baaa6072, type: 2}
+  - {fileID: 8574412962073106934, guid: d5565236e05e7b44bbeaa6b18a85a35c, type: 2}
+  - {fileID: 8574412962073106934, guid: 34a7124a250b6314f803cba5555e7faa, type: 2}
+  - {fileID: 8574412962073106934, guid: ef0832f488c397e40afbbf75448f0901, type: 2}
+  - {fileID: 8574412962073106934, guid: 56b2820651de357459e8d89d2b4f3f05, type: 2}
+  - {fileID: 8574412962073106934, guid: 0555da5016c860140a5968bc6e8a1692, type: 2}
+  - {fileID: 8574412962073106934, guid: 716937fe861ba6748bfd599e6802e70a, type: 2}
+  - {fileID: 8574412962073106934, guid: c25f012d8eaba684b9a392d71f427372, type: 2}
+  - {fileID: 8574412962073106934, guid: 6df3f0b3f6ea6214eb2985280bd876cf, type: 2}
+  - {fileID: 8574412962073106934, guid: 214a96b66d2bd78428910fd83f8ace04, type: 2}
+  - {fileID: 8574412962073106934, guid: 6a3097ee6a39c594e8c63dae726b2278, type: 2}
