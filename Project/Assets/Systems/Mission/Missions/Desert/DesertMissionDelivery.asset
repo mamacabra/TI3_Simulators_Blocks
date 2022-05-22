@@ -20,3 +20,4 @@ MonoBehaviour:
   - {x: 148.26, y: 49.16, z: 155.61}
   - {x: 141.88, y: 54.48, z: 197.79}
   completedCanvas: {fileID: 8245237129404603204, guid: c460898d2c8973341bd7bf9f766b4d40, type: 3}
+  _targetFound: 0
