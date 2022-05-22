@@ -7,7 +7,7 @@ public class MissionSystem : MonoBehaviour
     public GameObject missionPanel;
     public Text missionList;
     private bool _display;
-    private IMission[] _missions = new IMission[3];
+    private MissionScriptableObject[] _missions = new MissionScriptableObject[3];
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class MissionSystem : MonoBehaviour
         }
     }
 
-    public void AddMission(IMission mission)
+    public void AddMission(MissionScriptableObject mission)
     {
         _missions[0] = mission;
         UpdateMissionList();
@@ -38,14 +38,14 @@ public class MissionSystem : MonoBehaviour
     {
         if (missionList != null)
         {
-            IMission mission;
+            MissionScriptableObject mission;
             missionList.text = "";
 
             for (int i = 0; i < _missions.Length; i++)
             {
                 mission = _missions[0];
-                missionList.text += mission.Name + "\n";
-                missionList.text += mission.Description + "\n";
+                missionList.text += mission.name + "\n";
+                missionList.text += mission.description + "\n";
                 missionList.text += "\n";
             }
         }
