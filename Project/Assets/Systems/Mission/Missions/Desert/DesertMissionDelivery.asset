@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb91f604f9adf2a409bd76c21dde58b4, type: 3}
+  m_Name: DesertMissionDelivery
+  m_EditorClassIdentifier: 
+  name: Desert Delivery 001
+  description: Like iFoode
+  minToComplete: 2
+  target: {fileID: 1734304357178927749, guid: 2074d4781a089bb4f81c90b512ddce5f, type: 3}
+  targetsPositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  completedCanvas: {fileID: 8245237129404603204, guid: c460898d2c8973341bd7bf9f766b4d40, type: 3}
