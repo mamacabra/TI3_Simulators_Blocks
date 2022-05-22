@@ -17,6 +17,7 @@ MonoBehaviour:
   minToComplete: 2
   target: {fileID: 1734304357178927749, guid: 2074d4781a089bb4f81c90b512ddce5f, type: 3}
   targetsPositions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: -3, y: 0, z: 10}
+  - {x: 3, y: 0, z: 10}
   completedCanvas: {fileID: 8245237129404603204, guid: c460898d2c8973341bd7bf9f766b4d40, type: 3}
+  _targetFound: 0

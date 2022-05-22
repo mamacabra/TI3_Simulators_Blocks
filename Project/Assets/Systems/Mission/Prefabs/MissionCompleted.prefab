@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 911539226638643100}
   - component: {fileID: 4285784383671930565}
   - component: {fileID: 2537510078890335629}
-  - component: {fileID: 2692611911280604590}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -157,18 +156,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2692611911280604590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521799530376429642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416a61e4f66e76148982d5530cdde525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1799964653980925740
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2692611911280604590}
+      - m_Target: {fileID: 6116318440209489606}
         m_TargetAssemblyTypeName: MissionCompleted, Assembly-CSharp
         m_MethodName: OnClickCloseCompletedModal
         m_Mode: 1
@@ -556,6 +543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1791491544104516856}
+  - component: {fileID: 6116318440209489606}
   m_Layer: 0
   m_Name: MissionCompleted
   m_TagString: Untagged
@@ -579,3 +567,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6116318440209489606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245237129404603204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416a61e4f66e76148982d5530cdde525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
