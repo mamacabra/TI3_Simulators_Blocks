@@ -48,3 +48,5 @@ MonoBehaviour:
   sideBtText: {fileID: 0}
   topBtText: {fileID: 0}
   panelButtons: {fileID: 0}
+  zoomValue: 4
+  canDestroy: 0

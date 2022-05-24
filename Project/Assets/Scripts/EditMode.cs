@@ -6,15 +6,19 @@ using Cinemachine;
 
 public class EditMode : MonoBehaviour
 {
+    public static EditMode editMode;
     public CinemachineVirtualCamera cmCamera;
     public Text editBtText, sideBtText, topBtText;
     public GameObject panelButtons;
+    public GameObject vehicle;
     private CinemachineTransposer cmTransposer;
-    private Vector3 lastOffset = new Vector3(0,4,-4);
+    private Vector3 lastOffset = new Vector3(0, 4, -4);
     private bool side = false;
     private bool top = false;
-    private bool isEdit = false;
+    public bool isEdit = false;
     public int zoomValue = 4;
+    public bool canDestroy = false;
+    public bool canCreate = false;
     public void EditCarClick()
     {
         if (!isEdit)
@@ -26,6 +30,8 @@ public class EditMode : MonoBehaviour
             cmTransposer.m_FollowOffset = lastOffset;
             editBtText.text = "Fechar\nEdição";
             panelButtons.SetActive(true);
+            vehicle.GetComponent<VehicleV1Reset>().pastPos.SetPositionAndRotation(vehicle.transform.position, vehicle.transform.rotation);
+            // vehicle.GetComponent<VehicleV1Reset>().EditVehicle();
         }
         else
         {
@@ -35,9 +41,12 @@ public class EditMode : MonoBehaviour
             lastOffset = new Vector3(0, 4, -4);
             cmTransposer.m_FollowOffset = lastOffset;
             editBtText.text = "Editar\nVeículo";
+            canCreate = false;
+            canDestroy = false;
             panelButtons.SetActive(false);
         }
         isEdit = !isEdit;
+        vehicle.GetComponent<VehicleV1Reset>().EditVehicle();
     }
     public void HorizontalView()
     {
@@ -71,54 +80,69 @@ public class EditMode : MonoBehaviour
         }
         top = !top;
     }
-    public void ZoomPlusClick(int zoomQuantity){
+    public void ZoomPlusClick(int zoomQuantity)
+    {
         // if (zoomValue  2)
         // {
         zoomValue += zoomQuantity;
         // }
         if (lastOffset.x > 0)
         {
-            lastOffset = new Vector3(zoomValue, 0,0);
+            lastOffset = new Vector3(zoomValue, 0, 0);
         }
         else if (lastOffset.x < 0)
         {
-            lastOffset = new Vector3(-zoomValue, 0,0);
+            lastOffset = new Vector3(-zoomValue, 0, 0);
         }
         else if (lastOffset.y > 0)
         {
-            lastOffset = new Vector3(0 , zoomValue, 0);
+            lastOffset = new Vector3(0, zoomValue, 0);
         }
         else if (lastOffset.y < 0)
         {
-            lastOffset = new Vector3(0 , -zoomValue, 0);
+            lastOffset = new Vector3(0, -zoomValue, 0);
         }
         cmTransposer.m_FollowOffset = lastOffset;
     }
-    public void ZoomMinusClick(int zoomQuantity){
+    public void ZoomMinusClick(int zoomQuantity)
+    {
         if (zoomValue > 2)
         {
             zoomValue -= zoomQuantity;
         }
         if (lastOffset.x > 0)
         {
-            lastOffset = new Vector3(zoomValue, 0,0);
+            lastOffset = new Vector3(zoomValue, 0, 0);
         }
         else if (lastOffset.x < 0)
         {
-            lastOffset = new Vector3(-zoomValue, 0,0);
+            lastOffset = new Vector3(-zoomValue, 0, 0);
         }
         else if (lastOffset.y > 0)
         {
-            lastOffset = new Vector3(0 , zoomValue, 0);
+            lastOffset = new Vector3(0, zoomValue, 0);
         }
         else if (lastOffset.y < 0)
         {
-            lastOffset = new Vector3(0 , -zoomValue, 0);
+            lastOffset = new Vector3(0, -zoomValue, 0);
         }
         cmTransposer.m_FollowOffset = lastOffset;
+    }
+
+    public void DestroyClick()
+    {
+        canCreate = false;
+        canDestroy = !canDestroy;
+    }
+    public void CreateClick()
+    {
+        canCreate = !canCreate;
     }
     void Start()
     {
         cmTransposer = cmCamera.GetCinemachineComponent<CinemachineTransposer>();
+    }
+    private void Awake() {
+        editMode = this;
     }
 }
