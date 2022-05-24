@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Desert Delivery 001
   description: Like iFoode
-  minToComplete: 2
+  minToComplete: 4
   target: {fileID: 1734304357178927749, guid: 2074d4781a089bb4f81c90b512ddce5f, type: 3}
   targetsPositions:
   - {x: 148.26, y: 49.16, z: 155.61}
