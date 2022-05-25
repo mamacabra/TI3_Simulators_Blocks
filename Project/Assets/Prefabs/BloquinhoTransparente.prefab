@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799382805370205577}
-  - component: {fileID: 1799382805370205576}
-  - component: {fileID: 1799382805370205579}
   m_Layer: 0
   m_Name: BloquinhoTransparente
   m_TagString: Untagged
@@ -27,26 +25,59 @@ Transform:
   m_GameObject: {fileID: 1799382805370205578}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3826264954254515723}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1799382805370205576
+--- !u!1 &5786364259512258939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3826264954254515723}
+  - component: {fileID: 3204195865162120853}
+  - component: {fileID: 6115519573913178544}
+  m_Layer: 0
+  m_Name: BloquinhoTransparente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3826264954254515723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786364259512258939}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
+  m_Children: []
+  m_Father: {fileID: 1799382805370205577}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3204195865162120853
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799382805370205578}
+  m_GameObject: {fileID: 5786364259512258939}
   m_Mesh: {fileID: 7938942051808630959, guid: fc8c8ddb2a9270b40ad91c62e3a930aa, type: 3}
---- !u!23 &1799382805370205579
+--- !u!23 &6115519573913178544
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799382805370205578}
+  m_GameObject: {fileID: 5786364259512258939}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

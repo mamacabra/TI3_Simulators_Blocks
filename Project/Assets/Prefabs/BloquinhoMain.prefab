@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5624193007010114841
+--- !u!1 &474199875510925061
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4991946691451205539}
-  - component: {fileID: 8280200534496753670}
-  - component: {fileID: 6128794146401242316}
-  - component: {fileID: 5624193007010114839}
-  - component: {fileID: 5624193007010114840}
-  - component: {fileID: 5624193007010114838}
+  - component: {fileID: 4806529573781656762}
+  - component: {fileID: 4904381009311629264}
+  - component: {fileID: 8984338560250567930}
   m_Layer: 6
   m_Name: BloquinhoMain
   m_TagString: BlockMain
@@ -21,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4991946691451205539
+--- !u!4 &4806529573781656762
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624193007010114841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 474199875510925061}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4991946691451205539}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8280200534496753670
+--- !u!33 &4904381009311629264
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624193007010114841}
+  m_GameObject: {fileID: 474199875510925061}
   m_Mesh: {fileID: 7938942051808630959, guid: fc8c8ddb2a9270b40ad91c62e3a930aa, type: 3}
---- !u!23 &6128794146401242316
+--- !u!23 &8984338560250567930
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624193007010114841}
+  m_GameObject: {fileID: 474199875510925061}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,6 +81,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5624193007010114841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4991946691451205539}
+  - component: {fileID: 5624193007010114839}
+  - component: {fileID: 5624193007010114840}
+  - component: {fileID: 5624193007010114838}
+  m_Layer: 6
+  m_Name: BloquinhoMain
+  m_TagString: BlockMain
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4991946691451205539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624193007010114841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4806529573781656762}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5624193007010114839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,7 +142,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19999999, y: 0.20000002, z: 0.19999991}
+  m_Size: {x: 0.4, y: 0.4, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5624193007010114838
 MonoBehaviour:
