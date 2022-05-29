@@ -133,6 +133,10 @@ public class MenuController : MonoBehaviour
     public void FaseUm(){
         SceneManager.LoadScene("FoiOqueDeuPraFazer2");
     }
+    public void FaseDois()
+    {
+        SceneManager.LoadScene("FoiOqueDeuPraFazer3");
+    }
 
     void ChangePanel(){
         switch (state){
