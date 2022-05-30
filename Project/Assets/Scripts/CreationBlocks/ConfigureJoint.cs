@@ -17,8 +17,10 @@ public class ConfigureJoint : MonoBehaviour
         Vector3.down
     };
     // Start is called before the first frame update
+    
     void Start()
     {
+        
         if (transform.tag == "BlockMain")
         {
             for (int i = 0; i < _directions.Length; i++)
