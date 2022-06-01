@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ConfigureJoint : MonoBehaviour
 {
-    public GameObject txt;
+    // public GameObject txt;
     public bool canDestroy = false;
     public float rayDistance = 0.15f;
     public List<int> nonCollidingDirs;
@@ -27,7 +27,7 @@ public class ConfigureJoint : MonoBehaviour
     private void Awake() {
         
         rb = this.gameObject.GetComponent<Rigidbody>();
-        txt = GameObject.Find("Textinho");
+        // txt = GameObject.Find("Textinho");
         main = GameObject.Find("BloquinhoMain");
 
     }

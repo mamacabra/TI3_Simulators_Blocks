@@ -10,7 +10,8 @@ public class VehicleV1Reset : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        // this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
     public void EditVehicle()
     {
@@ -30,23 +31,5 @@ public class VehicleV1Reset : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (this.gameObject.name == "Vehicle-v4")
-        //{
-        //    if (Input.GetKeyDown(KeyCode.R))
-        //    {
-        //        this.gameObject.transform.position = pos.position;
-        //        this.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-        //        this.gameObject.GetComponent<Rigidbody>().Sleep();
-        //    }
-        //}
-        //else
-        //{
-        //    if (Input.GetKeyDown(KeyCode.R))
-        //    {
-        //        this.gameObject.transform.position = pos.position;
-        //        this.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-        //        this.gameObject.GetComponent<Rigidbody>().Sleep();
-        //    }
-        //}
     }
 }
