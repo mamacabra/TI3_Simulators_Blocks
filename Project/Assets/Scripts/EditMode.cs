@@ -19,6 +19,7 @@ public class EditMode : MonoBehaviour
     public int zoomValue = 4;
     public bool canDestroy = false;
     public bool canCreate = false;
+    // public List<GameObject> blocs;
     public void EditCarClick()
     {
         if (!isEdit)
@@ -136,11 +137,17 @@ public class EditMode : MonoBehaviour
     }
     public void CreateClick()
     {
+        canDestroy = false;
         canCreate = !canCreate;
     }
     void Start()
     {
         cmTransposer = cmCamera.GetCinemachineComponent<CinemachineTransposer>();
+        // GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("BlockBuild");
+        // foreach (var item in gameObjects)
+        // {
+        //     blocs.Add(item);
+        // }
     }
     private void Awake() {
         editMode = this;

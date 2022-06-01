@@ -21,7 +21,7 @@ public class CreateBlock : MonoBehaviour
         Vector3.down
     };
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (EditMode.editMode.canCreate)
         {
@@ -34,6 +34,20 @@ public class CreateBlock : MonoBehaviour
             {
                 GenerateBloc(obj, dir);
             }
+        }
+        else if (EditMode.editMode.canDestroy)
+        {
+            DefinePosition();
+            TestDraw();
+            (GameObject obj, int dir) = IndentifyIntersectBloc();
+            SetPosition(obj, dir);
+            // if (isColliding)
+            // {
+            if (obj != null && obj.name != "BloquinhoMain")
+            {
+                DestroyBloc(obj, dir);
+            }
+            // }
         }
         else
         {
@@ -48,6 +62,33 @@ public class CreateBlock : MonoBehaviour
             var myBlock = Instantiate(bloc, previewBloc.transform.position, Quaternion.identity);
             myBlock.transform.parent = GameObject.Find("Vehicle-v4").transform;
             obj.GetComponent<ConfigureJoint>().nonCollidingDirs.Remove(dir);
+        }
+    }
+    private void DestroyBloc(GameObject obj, int dir)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            // var myBlock = Instantiate(bloc, previewBloc.transform.position, Quaternion.identity);
+            // myBlock.transform.parent = GameObject.Find("Vehicle-v4").transform;
+            // obj.GetComponent<ConfigureJoint>().nonCollidingDirs.Add(dir);
+            // EditMode.editMode.blocs.Remove(obj);
+            Destroy(obj);
+            // foreach (GameObject objects in EditMode.editMode.blocs)
+            // {
+            //     objects.GetComponent<ConfigureJoint>().TestDirections();
+            // }
+            GameObject[] gObj = GameObject.FindGameObjectsWithTag("BlockBuild");
+            foreach (GameObject go in gObj)
+            {
+                try
+                {
+                    go.GetComponent<ConfigureJoint>().TestDirections();
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.Log("deu ruim: " + ex.Message); // TODO
+                }
+            }
         }
     }
 
@@ -175,10 +216,15 @@ public class CreateBlock : MonoBehaviour
                     {
                         dir = i - 1;
                     }
-
+                    // isColliding = true;
                     break;
                 }
             }
+            // else
+            // {
+            //     // isColliding = false;
+            //     break;
+            // }
         }
         return (obj, dir);
     }
