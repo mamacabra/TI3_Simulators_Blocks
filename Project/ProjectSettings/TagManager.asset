@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BlockMain
   - BlockBuild
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

@@ -9,10 +9,13 @@ public class WheelMovement : MonoBehaviour
     public float torque = 1000.0f;
     public float steerAngle = 35.0f;
     public float brakeTorque = 2000.0f;
+    public float speed = 1f;
+   
     // Start is called before the first frame update
     void Start()
     {
         wheelCollider = GetComponent<WheelCollider>();
+        
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class WheelMovement : MonoBehaviour
         else
         {
             wheelCollider.brakeTorque = 0;
-        }
+        }                  
     }
     void LateUpdate()
     {
