@@ -16,10 +16,14 @@ public class VehicleV1Reset : MonoBehaviour
     {
         if (EditMode.editMode.isEdit)
         {
+            this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.transform.SetPositionAndRotation(editPos.position, editPos.rotation);
         }
         else
         {
+            this.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             this.transform.SetPositionAndRotation(pastPos.position, pastPos.rotation);
         }
     }
@@ -32,7 +36,7 @@ public class VehicleV1Reset : MonoBehaviour
             {
                 this.gameObject.transform.position = pos.position;
                 this.gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-                // this.gameObject.GetComponent<Rigidbody>().Sleep();
+                this.gameObject.GetComponent<Rigidbody>().Sleep();
             }
         }
         else

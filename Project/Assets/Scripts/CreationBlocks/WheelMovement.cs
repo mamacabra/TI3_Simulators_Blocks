@@ -49,5 +49,6 @@ public class WheelMovement : MonoBehaviour
         // NOTE: Atualiza posição e rotação do modelo das rodas
         wheelCollider.GetWorldPose(out pos, out rot);
         model.rotation = rot;
+        model.position = pos;
     }
 }

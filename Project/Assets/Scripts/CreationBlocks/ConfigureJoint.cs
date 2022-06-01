@@ -58,33 +58,37 @@ public class ConfigureJoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TestDirections();
+        // TestDirections();
         TestDraw();
         canDestroy = EditMode.editMode.canDestroy;
         if (EditMode.editMode.isEdit)
         {
-            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            // this.gameObject.GetComponent<Rigidbody>().Sleep();
+            // this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
         else
         {
-            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             this.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            // this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
-    void TestDirections()
+    public void TestDirections()
     {
+        nonCollidingDirs.Clear();
         for (int i = 0; i < _directions.Length; i++)
         {
             bool colliding = Physics.Raycast(transform.position, _directions[i], out _hit[i], rayDistance);
 
             if (!(colliding && _hit[i].collider.gameObject.tag == "BlockBuild"))
             {
-                if (!nonCollidingDirs.Contains(i))
-                {
+                // if (!nonCollidingDirs.Contains(i))
+                // {
                     nonCollidingDirs.Add(i);
-                }
+                // }
             }
         }
     }
@@ -96,7 +100,7 @@ public class ConfigureJoint : MonoBehaviour
             {
                 if (_hit[i].collider.gameObject.tag == "BlockBuild")
                 {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(_directions[i]) * _hit[i].distance, Color.blue);
+                    Debug.DrawRay(transform.position, _directions[i] * _hit[i].distance, Color.blue);
                 }
             }
             else
@@ -109,6 +113,19 @@ public class ConfigureJoint : MonoBehaviour
     {
         if (canDestroy && transform.tag != "BlockMain")
         {
+            GameObject[] gObj = GameObject.FindGameObjectsWithTag("BlockBuild");
+            foreach (GameObject go in gObj)
+            {
+                try
+                {
+                    go.GetComponent<ConfigureJoint>().TestDirections();
+                    
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.Log("deu ruim: " + ex.Message); // TODO
+                }
+            }
             Destroy(this.gameObject);
         }
     }
