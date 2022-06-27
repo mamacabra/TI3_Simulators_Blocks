@@ -657,9 +657,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: NoiseModule.frequency
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5.21
+      objectReference: {fileID: 0}
     - target: {fileID: 5226888983408899478, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: m_Name
       value: Bonfire_B_Big_Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381223940063635982, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5529790042386735382, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: m_Materials.Array.size
@@ -724,6 +744,18 @@ PrefabInstance:
     - target: {fileID: 6191029045049979512, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322712800987531299, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322712800987531299, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322712800987531299, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
@@ -5539,12 +5571,36 @@ PrefabInstance:
       value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: NoiseModule.frequency
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 0.1
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
+      propertyPath: NoiseModule.positionAmount.scalar
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 5
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 4596573844671821960, guid: b4e05b86688c5493db1dc78b2b6f3839, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
